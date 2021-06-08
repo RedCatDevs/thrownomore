@@ -7,6 +7,8 @@ import {CartActions} from '../../context/actions';
 import {goodMock} from '../../mocks/goodMock';
 import styles from './styles';
 
+import Chevron from '../../assets/chevron_left.png';
+
 const GoodScreen = () => {
   const globalState = useContext(store);
   const {state, dispatch} = globalState;
@@ -41,9 +43,12 @@ const GoodScreen = () => {
     }
   };
 
+  const priceString = price => String(price).replace('.', ',');
+
   return (
     <ContentWrapper title={'Logg inn'}>
       <View style={styles.container}>
+        <Image source={Chevron} style={styles.chevron} />
         <Text style={styles.title}>{goodMock.name}</Text>
         <Text style={styles.weight}>{goodMock.weight} gr.</Text>
         <View style={styles.detailsContainer}>
@@ -54,12 +59,14 @@ const GoodScreen = () => {
               style={styles.shopBadge}
             />
           </View>
-          <View>
+          <View style={styles.textContainer}>
             <View>
-              <Text>{goodMock.price}</Text>
-              <Text>{goodMock.discountPrice}</Text>
+              <Text style={styles.price}>{priceString(goodMock.price)}kr</Text>
+              <Text style={styles.discountPrice}>
+                {priceString(goodMock.discountPrice)}kr
+              </Text>
             </View>
-            <Text>{goodMock.shopName}</Text>
+            <Text style={styles.shopName}>{goodMock.shopName}</Text>
           </View>
         </View>
         {thisGoodNumberInCart ? (

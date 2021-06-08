@@ -9,6 +9,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.green,
   },
+  chevron: {
+    height: 25,
+    width: 15,
+    resizeMode: 'contain',
+    tintColor: colors.green,
+  },
 });
 
 export default styles;

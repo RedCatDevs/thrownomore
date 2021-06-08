@@ -1,11 +1,12 @@
 import React, {useContext} from 'react';
-import {View, Text, SectionList} from 'react-native';
+import {View, Text, SectionList, Image} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import CartItem from '../../components/CartItem';
 import TotalCartInfo from '../../components/TotalCartInfo';
 import ContentWrapper from '../../components/Wrapper';
 import {store} from '../../context';
 import styles from './styles';
+import Chevron from '../../assets/chevron_left.png';
 
 const CartScreen = () => {
   const globalState = useContext(store);
@@ -37,6 +38,7 @@ const CartScreen = () => {
   getSections();
   return (
     <ContentWrapper title={'Shopping List'}>
+      <Image source={Chevron} style={styles.chevron} />
       <SectionList
         sections={getSections()}
         renderItem={renderCartItem}

@@ -5,6 +5,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  chevron: {
+    height: 25,
+    width: 15,
+    resizeMode: 'contain',
+    tintColor: colors.green,
+  },
   title: {
     fontSize: 25,
     fontWeight: 'bold',
@@ -29,6 +35,23 @@ const styles = StyleSheet.create({
   imagesContainer: {
     flex: 1,
     alignItems: 'center',
+  },
+  textContainer: {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  price: {
+    color: colors.gray,
+    fontSize: 20,
+  },
+  discountPrice: {
+    fontSize: 25,
+    fontWeight: 'bold',
+  },
+  shopName: {
+    textTransform: 'uppercase',
+    color: colors.green,
+    fontSize: 15,
   },
 });
 
