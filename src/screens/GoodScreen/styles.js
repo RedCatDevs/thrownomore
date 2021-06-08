@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     fontWeight: 'bold',
+    textTransform: 'uppercase',
   },
   weight: {
     fontSize: 20,
@@ -39,10 +40,14 @@ const styles = StyleSheet.create({
   textContainer: {
     justifyContent: 'space-between',
     alignItems: 'center',
+    position: 'absolute',
+    right: 0,
+    height: '100%',
   },
   price: {
     color: colors.gray,
     fontSize: 20,
+    textDecorationLine: 'line-through',
   },
   discountPrice: {
     fontSize: 25,

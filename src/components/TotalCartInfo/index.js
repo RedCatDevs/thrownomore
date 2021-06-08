@@ -25,7 +25,7 @@ const TotalCartInfo = () => {
         </View>
       </View>
       <Text style={styles.saveText}>
-        You will saving {itemsLength} products: {totalWeight} gr. and{' '}
+        You will save {itemsLength} products: {totalWeight} gr. and{' '}
         {priceString(discount)} kr
       </Text>
     </View>
